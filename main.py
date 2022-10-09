@@ -28,9 +28,9 @@ print('Window location at: ' + str(xLoc) + ' ' + str(yLoc))
 
 # Window Components START
 btnStart = Button(window, text="Start")
-btn.grid(column=0, row=0)
+btnStart.grid(column=0, row=0)
 btnEnd = Button(window, text="End")
-btn.grid(column=0, row=1)
+btnEnd.grid(column=0, row=1)
 # Window Components END
 
 window.eval('tk::PlaceWindow . center')
