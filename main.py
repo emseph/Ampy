@@ -21,7 +21,7 @@ winW = 500
 winX = scrW/2
 winY = scrH/2
 winx = winW/2
-winy =winH/2
+winy = winH/2
 xLoc = int(winX - winx)
 yLoc = int(winY - winy)
 print('Window location at: ' + str(xLoc) + ' ' + str(yLoc))
