@@ -13,20 +13,24 @@ scrH = window.winfo_screenheight()
 scrW = window.winfo_screenwidth()
 print("Screen Size is: " + str(scrW) + "x" + str(scrH))
 
-winX = scrW/2
-winY = scrH/2
-
+# Set window dimensions
 winH = 200
 winW = 500
 
-xLoc = int(winX - (winW/2))
-yLoc = int(winY - (winH/2))
+# Initialize screen location
+winX = scrW/2
+winY = scrH/2
+winx = winW/2
+winy =winH/2
+xLoc = int(winX - winx)
+yLoc = int(winY - winy)
 print('Window location at: ' + str(xLoc) + ' ' + str(yLoc))
 
 # Window Components START
 btn = Button(window, text="Click Me")
 btn.grid(column=1, row=0)
 # Window Components END
+
 window.eval('tk::PlaceWindow . center')
 window.title("Auto Mouse Mover")
 window.geometry("{}x{}+{}+{}".format(winW,winH,xLoc,yLoc))
