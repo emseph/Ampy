@@ -5,6 +5,14 @@ from tkinter import *
 
 autoloop = 0
 
+def move():
+    while(autoloop == 0):
+        for z in range(1,2):
+            x = random.randint(0,500)
+            y = random.randint(0,500)
+            pyautogui.moveTo(x,y)
+            time.sleep(2)
+
 window = Tk()
 window.resizable(False,False)
 
@@ -27,7 +35,7 @@ yLoc = int(winY - winy)
 print('Window location at: ' + str(xLoc) + ' ' + str(yLoc))
 
 # Window Components START
-btnStart = Button(window, text="Start")
+btnStart = Button(window, text="Start", command=move)
 btnStart.grid(column=0, row=0)
 btnEnd = Button(window, text="End")
 btnEnd.grid(column=0, row=1)
@@ -39,10 +47,4 @@ window.geometry("{}x{}+{}+{}".format(winW,winH,xLoc,yLoc))
 window.mainloop()
 
 
-def move():
-    while(autoloop == 0):
-        for z in range(1,2):
-            x = random.randint(0,500)
-            y = random.randint(0,500)
-            pyautogui.moveTo(x,y)
-            time.sleep(2)
+
